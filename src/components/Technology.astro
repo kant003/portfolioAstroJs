@@ -1,0 +1,21 @@
+---
+interface Props{
+    name: string,
+    description?: string
+}
+const {name, description} = Astro.props
+---
+<div class="card">
+    <h2>{name}</h2>
+    <p>{description}</p>
+</div>
+<style>
+    .card{
+        display:flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+        background: url("/images/stars.gif");
+    }
+
+</style>

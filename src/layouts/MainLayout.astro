@@ -1,0 +1,47 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+
+/* const title = Astro.props.title
+const colour = Astro.props.colour */
+interface Props {
+    title: string,
+    colour?: string
+}
+const {title='Titulo by default', colour='blue'} = Astro.props as Props
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style is:global>
+        :root{
+            --h1-color: white;
+        }
+        html{
+            font-family: system-ui, sans-serif;
+        }
+        body{
+            margin: 0;
+            background: url("/images/fondo.png") rgb(24,16,31);
+            color: white;
+        }
+        .main-title{
+            color: var(--h1-color);
+        }
+    </style>
+</head>
+<body>
+    <Nav/>
+    <Header/>
+    <h1 class="main-title">{title}</h1>
+    <slot/>
+    <Footer/>
+</body>
+</html>

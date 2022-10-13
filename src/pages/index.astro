@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="">
+	<div class="container">
+		<img class="photo" src="/public/images/foto.jpg" />
+		<div class="content">
+			<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatum qui facere cupiditate eius recusandae dolorum aliquam ut. A provident quam, nemo sequi atque quisquam rem est? Eos, autem nisi.</div>
+			<div>📦 Github: https://github.com/XXX</div>
+			<div>📤 Email: xxx@gmail.com</div>
+			<div>🙌 linkedin: xxx.xxx.com</div>
+		</div>
+	</div>
+</MainLayout>
+<style>
+	.photo{
+		width: 150px;
+		border-radius: 10px;
+		transform: rotate(10deg);
+		/* https://getcssscan.com/css-box-shadow-examples */
+		box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -2px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
+	.container {
+		display: flex;
+		gap: 20px;
+		margin: 50px;
+	}
+	.content{
+		display: flex;   flex-direction: column;   gap:10px;
+	}
+</style>

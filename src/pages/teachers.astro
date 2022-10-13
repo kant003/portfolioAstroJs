@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+const teachers = ['Bea', 'Pepe', 'Ángel', 'Isabel'];
+const showSubtitle = false
+---
+
+<MainLayout title="DAM teacher's list" colour="red">
+    {showSubtitle && <small>Los mejores profes</small>}
+
+    <ul>
+        {teachers && teachers.map( teacher => <li>{teacher}</li> )}
+    </ul>
+
+    {teachers?.length <= 0 && <p>No hay profesores</p> }
+</MainLayout>
+
+<script>
+
+</script>

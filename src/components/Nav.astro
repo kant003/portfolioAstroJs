@@ -1,0 +1,42 @@
+<nav class="sticky"> 
+    <a class="link" href="/">Home</a>
+    <a class="link" href="/teachers">My teachers</a>
+    <a class="link" href="/favouriteFilm">Favourite film</a>
+    <a class="link" href="/technologies">Skills</a>
+</nav>
+
+<style>
+    nav{
+        display:flex;
+        gap: 1rem;
+        padding: 1rem;
+        background: url("/images/fondo.png") rgb(24,16,31); 
+    }
+    .sticky{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    .link{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 1s;
+    }
+    .link:hover, 
+    .link:focus{
+        color: rgb(179, 0, 255);
+    }
+
+    .link::before{
+        content: "+";
+        color:white;
+    }
+    .link:hover::before{
+        color:aqua;
+        transition: all 1s;
+        transform: rotate(90deg);
+        display: inline-flex;
+    }
+
+</style>

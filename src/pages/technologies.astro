@@ -1,0 +1,33 @@
+---
+import Technology from "../components/Technology.astro";
+import MainLayout from "../layouts/MainLayout.astro"
+const data = [
+    {name:"Vite", description:"Empaquetador web"},
+    {name:"React", description:"Libreria para crear interfaces web"},
+    {name:"MongoDB", description:"Base de datos no relacional"},
+]
+---
+
+
+
+<MainLayout title="The technologies that I master">
+    <div class="container">
+        <Technology name="Vite" description="Empaquetador web"/>
+        <Technology name="React" description="Libreria para crear interfaces web"/>
+        <Technology name="MongoDB" description="Base de datos no relacional"/>
+        <Technology name="Java" description="Lenguaje de programacion"/>
+        <Technology name="Javascript" description="Lenguaje de programacion"/>
+        
+        {data.map( t => <Technology name={t.name} description={t.description}/>)}
+
+    </div>
+</MainLayout>
+
+<style>
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap:10px;
+        margin:10px;
+    }
+</style>
