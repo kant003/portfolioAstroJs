@@ -1,0 +1,5 @@
+[
+    {"name":"Vite", "description":"Empaquetador web"},
+    {"name":"React", "description":"Libreria para crear interfaces web"},
+    {"name":"MongoDB", "description":"Base de datos no relacional"}
+]

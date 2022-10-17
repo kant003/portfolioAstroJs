@@ -1,0 +1,18 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+const articles = await Astro.glob("../pages/articles/*.md")
+const nonDraftArticles = articles
+            .filter((article) => !article.frontmatter.draft);
+
+---
+
+
+<MainLayout title="Articles List">
+<ul>
+    {nonDraftArticles.map( article => 
+        <li>{article.frontmatter.title} 
+            <a href={article.url}>Leer más</a>
+        </li>
+    )}
+</ul>
+</MainLayout>
